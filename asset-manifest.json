@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/habiba-kitchen/static/css/main.0d3cd006.chunk.css",
-    "main.js": "/habiba-kitchen/static/js/main.c0234265.chunk.js",
-    "main.js.map": "/habiba-kitchen/static/js/main.c0234265.chunk.js.map",
+    "main.js": "/habiba-kitchen/static/js/main.d7b21d58.chunk.js",
+    "main.js.map": "/habiba-kitchen/static/js/main.d7b21d58.chunk.js.map",
     "runtime-main.js": "/habiba-kitchen/static/js/runtime-main.b2d6e3ff.js",
     "runtime-main.js.map": "/habiba-kitchen/static/js/runtime-main.b2d6e3ff.js.map",
     "static/css/2.4be38407.chunk.css": "/habiba-kitchen/static/css/2.4be38407.chunk.css",
@@ -24,6 +24,6 @@
     "static/css/2.4be38407.chunk.css",
     "static/js/2.b8473284.chunk.js",
     "static/css/main.0d3cd006.chunk.css",
-    "static/js/main.c0234265.chunk.js"
+    "static/js/main.d7b21d58.chunk.js"
   ]
 }
