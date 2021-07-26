@@ -1,0 +1,27 @@
+.quantity_input {
+  display: flex;
+
+  .minus,
+  .plus {
+    background-color: #fff;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid rgb(0, 0, 0);
+    margin: 0.2em;
+  }
+
+  .quantity_input {
+    height: 40px;
+    width: 40px;
+    margin: 0.2em;
+    text-align: center;
+    align-content: center;
+  }
+}
