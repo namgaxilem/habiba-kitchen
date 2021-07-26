@@ -2,7 +2,7 @@
   "name": "habiba-kitchen",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https:/namgaxilem.github.io/habiba-kitchen/",
+  "homepage": "https://namgaxilem.github.io/habiba-kitchen/",
   "dependencies": {
     "@popperjs/core": "^2.9.2",
     "@reduxjs/toolkit": "^1.6.0",
