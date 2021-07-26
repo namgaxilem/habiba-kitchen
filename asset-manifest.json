@@ -1,19 +1,20 @@
 {
   "files": {
-    "main.css": "/namgaxilem.github.io/habiba-kitchen/static/css/main.c6a81c8e.chunk.css",
-    "main.js": "/namgaxilem.github.io/habiba-kitchen/static/js/main.3f83a750.chunk.js",
-    "main.js.map": "/namgaxilem.github.io/habiba-kitchen/static/js/main.3f83a750.chunk.js.map",
+    "main.css": "/namgaxilem.github.io/habiba-kitchen/static/css/main.0d3cd006.chunk.css",
+    "main.js": "/namgaxilem.github.io/habiba-kitchen/static/js/main.c0234265.chunk.js",
+    "main.js.map": "/namgaxilem.github.io/habiba-kitchen/static/js/main.c0234265.chunk.js.map",
     "runtime-main.js": "/namgaxilem.github.io/habiba-kitchen/static/js/runtime-main.5a87666b.js",
     "runtime-main.js.map": "/namgaxilem.github.io/habiba-kitchen/static/js/runtime-main.5a87666b.js.map",
     "static/css/2.4be38407.chunk.css": "/namgaxilem.github.io/habiba-kitchen/static/css/2.4be38407.chunk.css",
-    "static/js/2.2bb77fde.chunk.js": "/namgaxilem.github.io/habiba-kitchen/static/js/2.2bb77fde.chunk.js",
-    "static/js/2.2bb77fde.chunk.js.map": "/namgaxilem.github.io/habiba-kitchen/static/js/2.2bb77fde.chunk.js.map",
+    "static/js/2.b8473284.chunk.js": "/namgaxilem.github.io/habiba-kitchen/static/js/2.b8473284.chunk.js",
+    "static/js/2.b8473284.chunk.js.map": "/namgaxilem.github.io/habiba-kitchen/static/js/2.b8473284.chunk.js.map",
     "static/js/3.908c6dd3.chunk.js": "/namgaxilem.github.io/habiba-kitchen/static/js/3.908c6dd3.chunk.js",
     "static/js/3.908c6dd3.chunk.js.map": "/namgaxilem.github.io/habiba-kitchen/static/js/3.908c6dd3.chunk.js.map",
     "index.html": "/namgaxilem.github.io/habiba-kitchen/index.html",
     "static/css/2.4be38407.chunk.css.map": "/namgaxilem.github.io/habiba-kitchen/static/css/2.4be38407.chunk.css.map",
-    "static/css/main.c6a81c8e.chunk.css.map": "/namgaxilem.github.io/habiba-kitchen/static/css/main.c6a81c8e.chunk.css.map",
-    "static/js/2.2bb77fde.chunk.js.LICENSE.txt": "/namgaxilem.github.io/habiba-kitchen/static/js/2.2bb77fde.chunk.js.LICENSE.txt",
+    "static/css/main.0d3cd006.chunk.css.map": "/namgaxilem.github.io/habiba-kitchen/static/css/main.0d3cd006.chunk.css.map",
+    "static/js/2.b8473284.chunk.js.LICENSE.txt": "/namgaxilem.github.io/habiba-kitchen/static/js/2.b8473284.chunk.js.LICENSE.txt",
+    "static/media/avatar.67b64e67.jpg": "/namgaxilem.github.io/habiba-kitchen/static/media/avatar.67b64e67.jpg",
     "static/media/download-1.9c68ca47.jfif": "/namgaxilem.github.io/habiba-kitchen/static/media/download-1.9c68ca47.jfif",
     "static/media/download-2.94ee43f9.jfif": "/namgaxilem.github.io/habiba-kitchen/static/media/download-2.94ee43f9.jfif",
     "static/media/download.67e0a9dc.jfif": "/namgaxilem.github.io/habiba-kitchen/static/media/download.67e0a9dc.jfif"
@@ -21,8 +22,8 @@
   "entrypoints": [
     "static/js/runtime-main.5a87666b.js",
     "static/css/2.4be38407.chunk.css",
-    "static/js/2.2bb77fde.chunk.js",
-    "static/css/main.c6a81c8e.chunk.css",
-    "static/js/main.3f83a750.chunk.js"
+    "static/js/2.b8473284.chunk.js",
+    "static/css/main.0d3cd006.chunk.css",
+    "static/js/main.c0234265.chunk.js"
   ]
 }
