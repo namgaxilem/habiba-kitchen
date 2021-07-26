@@ -1,0 +1,36 @@
+.dish-container {
+    max-height: 400px;
+  
+    .dish-container-border {
+      border-radius: 5px;
+      box-shadow: grey 0px 2px 4px;
+    }
+  
+    .dish-image-container {
+      display: block;
+      height: 200px;
+      max-height: 200px;
+      overflow: hidden;
+  
+      & > img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+  
+    .dish-title {
+      height: 2.5em;
+      overflow: hidden;
+      text-overflow: ellipsis;
+  
+      a {
+        text-decoration: none;
+        color: black;
+        font-weight: 700;
+      }
+    }
+  
+    .dish-price {
+    }
+  }

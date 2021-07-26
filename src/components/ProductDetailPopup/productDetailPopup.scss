@@ -1,0 +1,13 @@
+.modal {
+    .product_image {
+        img {
+            width: 100%;
+        }
+    }
+
+    .footer-modal {
+        display: flex;
+        justify-content: space-between;
+        box-shadow: #6c6d7df2 0px 0px 8px;
+    }
+}

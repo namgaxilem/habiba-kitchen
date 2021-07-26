@@ -4,10 +4,28 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { BrowserRouter } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import Cart from './components/Cart/Cart';
+import LoginSignupPopup from './components/LoginSignupPopup/LoginSignupPopup';
+import store from './store/store';
+import { Provider } from 'react-redux';
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+    <Provider store={store}>
+      <React.StrictMode>
+        <Header />
+        <Cart />
+        <LoginSignupPopup />
+        <App />
+        <Footer />
+      </React.StrictMode>
+    </Provider>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 
