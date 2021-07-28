@@ -111,6 +111,204 @@ const mock_product_data = {
   ],
   products: [
     {
+      "id": Math.random(),
+      "name": "Acoustic Bloc Screens",
+      "list_price": 2950.0,
+      "description": false,
+      "categ_id": [
+        14,
+      ]
+    },
+    {
+      "id": Math.random(),
+      "name": "Acoustic Bloc Screens",
+      "list_price": 2950.0,
+      "description": false,
+      "categ_id": [
+        14,
+      ]
+    },
+    {
+      "id": Math.random(),
+      "name": "Acoustic Bloc Screens",
+      "list_price": 2950.0,
+      "description": false,
+      "categ_id": [
+        14,
+      ]
+    },
+    {
+      "id": Math.random(),
+      "name": "Acoustic Bloc Screens",
+      "list_price": 2950.0,
+      "description": false,
+      "categ_id": [
+        14,
+      ]
+    },
+    {
+      "id": Math.random(),
+      "name": "Acoustic Bloc Screens",
+      "list_price": 2950.0,
+      "description": false,
+      "categ_id": [
+        14,
+      ]
+    },
+    {
+      "id": Math.random(),
+      "name": "Acoustic Bloc Screens",
+      "list_price": 2950.0,
+      "description": false,
+      "categ_id": [
+        14,
+      ]
+    },
+    {
+      "id": Math.random(),
+      "name": "Acoustic Bloc Screens",
+      "list_price": 2950.0,
+      "description": false,
+      "categ_id": [
+        14,
+      ]
+    },
+    {
+      "id": Math.random(),
+      "name": "Acoustic Bloc Screens",
+      "list_price": 2950.0,
+      "description": false,
+      "categ_id": [
+        14,
+      ]
+    },
+    {
+      "id": Math.random(),
+      "name": "Acoustic Bloc Screens",
+      "list_price": 2950.0,
+      "description": false,
+      "categ_id": [
+        14,
+      ]
+    },
+    {
+      "id": Math.random(),
+      "name": "Acoustic Bloc Screens",
+      "list_price": 2950.0,
+      "description": false,
+      "categ_id": [
+        12,
+      ]
+    },
+    {
+      "id": Math.random(),
+      "name": "Acoustic Bloc Screens",
+      "list_price": 2950.0,
+      "description": false,
+      "categ_id": [
+        12,
+      ]
+    },
+    {
+      "id": Math.random(),
+      "name": "Acoustic Bloc Screens",
+      "list_price": 2950.0,
+      "description": false,
+      "categ_id": [
+        12,
+      ]
+    },
+    {
+      "id": Math.random(),
+      "name": "Acoustic Bloc Screens",
+      "list_price": 2950.0,
+      "description": false,
+      "categ_id": [
+        30,
+      ]
+    },
+    {
+      "id": Math.random(),
+      "name": "Acoustic Bloc Screens",
+      "list_price": 2950.0,
+      "description": false,
+      "categ_id": [
+        15,
+      ]
+    },
+    {
+      "id": Math.random(),
+      "name": "Acoustic Bloc Screens",
+      "list_price": 2950.0,
+      "description": false,
+      "categ_id": [
+        15,
+      ]
+    },
+    {
+      "id": Math.random(),
+      "name": "Acoustic Bloc Screens",
+      "list_price": 2950.0,
+      "description": false,
+      "categ_id": [
+        15,
+      ]
+    },
+    {
+      "id": Math.random(),
+      "name": "Acoustic Bloc Screens",
+      "list_price": 2950.0,
+      "description": false,
+      "categ_id": [
+        15,
+      ]
+    },
+    {
+      "id": Math.random(),
+      "name": "Acoustic Bloc Screens",
+      "list_price": 2950.0,
+      "description": false,
+      "categ_id": [
+        15,
+      ]
+    },
+    {
+      "id": Math.random(),
+      "name": "Acoustic Bloc Screens",
+      "list_price": 2950.0,
+      "description": false,
+      "categ_id": [
+        15,
+      ]
+    },
+    {
+      "id": Math.random(),
+      "name": "Acoustic Bloc Screens",
+      "list_price": 2950.0,
+      "description": false,
+      "categ_id": [
+        15,
+      ]
+    },
+    {
+      "id": Math.random(),
+      "name": "Acoustic Bloc Screens",
+      "list_price": 2950.0,
+      "description": false,
+      "categ_id": [
+        15,
+      ]
+    },
+    {
+      "id": Math.random(),
+      "name": "Acoustic Bloc Screens",
+      "list_price": 2950.0,
+      "description": false,
+      "categ_id": [
+        15,
+      ]
+    },
+    {
       "id": 23,
       "name": "Acoustic Bloc Screens",
       "list_price": 2950.0,
@@ -381,6 +579,7 @@ function ProductPage() {
     //   },
     // }).then(result => {
     //   setCategories(result.data.categories);
+    //   setCategoriesWithProduct(result.data.categories);
     //   setProducts(result.data.products);
     // }, (error) => {
     //   console.log("error", error);
@@ -415,7 +614,7 @@ function ProductPage() {
     }
   }, []);
 
-  useEffect(() => { console.log("product changed", products)
+  useEffect(() => {
     const categoriesWithProducts = categories.map(c => {
       const productsFilter = products.filter(p => p.categ_id[0] == c.id);
       if (productsFilter.length === 0) return null;
@@ -428,8 +627,8 @@ function ProductPage() {
     setCategoriesWithProduct(categoriesWithProductsFiltered);
   }, [products]);
 
-  const onUserScroll = function () {
-    const product_category_bar = document.getElementsByClassName('product_category_bar')[0];
+  const onUserScroll = () => {
+    const product_category_bar = document.getElementById('productCategoryBar');
     const category_product = document.getElementsByClassName('category_product')[0];
     if (product_category_bar === undefined || category_product === undefined) return;
     const productCategoryBarOffsetTop = product_category_bar.offsetTop;
@@ -445,17 +644,47 @@ function ProductPage() {
     }
 
     const product_category_bar_arrays = document.getElementsByClassName('category_product');
-    for (let i = 0; i < product_category_bar_arrays.length; i++) {
-      console.log(product_category_bar_arrays[i].id, window.pageYOffset);
-      if (product_category_bar_arrays[i].offsetTop <= window.pageYOffset) {
-        setCurrentCategory_product_scroll(product_category_bar_arrays[i].id);
+
+    if (window.oldPageYOffset < window.pageYOffset) { // if page go down
+      for (let i = product_category_bar_arrays.length - 1; i >= 0; i--) {
+        const scrollToPosition = product_category_bar_arrays[i].offsetTop - product_category_bar.offsetHeight - 92.5 - 60;
+        const positionWindowPageYOffset = window.pageYOffset + (window.innerHeight / 2);
+        if ((scrollToPosition - positionWindowPageYOffset) <= 0) {
+          setCurrentCategory_product_scroll(product_category_bar_arrays[i].id);
+          break;
+        }
+      }
+    } else if (window.oldPageYOffset > window.pageYOffset) { // if page go down
+      for (let i = 0; i < product_category_bar_arrays.length; i++) {
+        const scrollToPosition = product_category_bar_arrays[i].offsetTop - product_category_bar.offsetHeight - 92.5 - 60;
+        const endOfScrollToPosition = scrollToPosition + product_category_bar_arrays[i].offsetHeight;
+        const positionWindowPageYOffset = window.pageYOffset + (window.innerHeight / 2);
+        if ((positionWindowPageYOffset - endOfScrollToPosition) <= 0) {
+          setCurrentCategory_product_scroll(product_category_bar_arrays[i].id);
+          break;
+        }
       }
     }
+    window.oldPageYOffset = window.pageYOffset;
+
+  }
+
+  const onProductCategoryBarclick = (category) => {
+    const id = `${category.id}-${category.name.replace(/\s+/g, '-')}`;
+    const productCategoryBarItem = document.getElementById(id);
+    const productCategoryBar = document.getElementById('productCategoryBar');
+    const scrollToPosition = productCategoryBarItem.offsetTop - productCategoryBar.offsetHeight - 92.5 - 60;
+    window.scrollTo(0, scrollToPosition);
   }
 
   const ProductCategoryBar = () => (
-    <div id="menu" className={"product_category_bar " + (fixedCategoryBar ? "stick" : "")}>
-      {categoriesWithProduct.map(category => <a className={currentCategory_product_scroll === `${category.id}-${category.name.replace(/\s+/g, '-')}` ? 'selected' : ''} key={category.id} href={`#${category.id}-${category.name}`}>{category.name}</a>)}
+    <div id="productCategoryBar" className={"product_category_bar " + (fixedCategoryBar ? "stick" : "")}>
+      {categoriesWithProduct.map(category =>
+        <a className={currentCategory_product_scroll === `${category.id}-${category.name.replace(/\s+/g, '-')}` ? 'selected' : ''}
+          key={category.id}
+          onClick={() => onProductCategoryBarclick(category)}>
+          {category.name}
+        </a>)}
     </div>
   );
 
