@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Product from '../Product/Product';
 import './productPage.scss';
 import ProductDetailPopup from '../ProductDetailPopup/ProductDetailPopup';
@@ -608,7 +608,10 @@ function ProductPage() {
       console.log("error", error);
     });
 
-    window.addEventListener('scroll', onUserScroll)
+    window.addEventListener('scroll', onUserScroll);
+    document.getElementById('productCategoryBar').addEventListener("touchstart", (e) => {
+      console.log('touchstart', e)
+    })
     return () => {
       window.removeEventListener('scroll', onUserScroll)
     }
@@ -628,6 +631,7 @@ function ProductPage() {
   }, [products]);
 
   const onUserScroll = () => {
+    // calculate for category bar
     const product_category_bar = document.getElementById('productCategoryBar');
     const category_product = document.getElementsByClassName('category_product')[0];
     if (product_category_bar === undefined || category_product === undefined) return;
@@ -643,6 +647,7 @@ function ProductPage() {
         break;
     }
 
+    // calculate for category bar items
     const product_category_bar_arrays = document.getElementsByClassName('category_product');
 
     if (window.oldPageYOffset < window.pageYOffset) { // if page go down
@@ -666,10 +671,25 @@ function ProductPage() {
       }
     }
     window.oldPageYOffset = window.pageYOffset;
-
   }
 
-  const onProductCategoryBarclick = (category) => {
+  useEffect(() => {
+    const id = "productCategoryBar_item_" + currentCategory_product_scroll;
+    const productCategoryBar_items = document.getElementsByClassName("productCategoryBar_item");
+    let offsetLeft;
+    for (let i = 0; i < productCategoryBar_items.length; i++) {
+      if (productCategoryBar_items[i].id === id) {
+        productCategoryBar_items[i].classList.add("selected")
+        offsetLeft = productCategoryBar_items[i].offsetLeft;
+      }
+      else {
+        productCategoryBar_items[i].classList.remove("selected")
+      }
+    }
+    document.getElementById('productCategoryBar').scrollTo(offsetLeft - 20, 0);
+  }, [currentCategory_product_scroll]);
+
+  const onProductCategoryBarclick = (e, category) => {
     const id = `${category.id}-${category.name.replace(/\s+/g, '-')}`;
     const productCategoryBarItem = document.getElementById(id);
     const productCategoryBar = document.getElementById('productCategoryBar');
@@ -680,9 +700,10 @@ function ProductPage() {
   const ProductCategoryBar = () => (
     <div id="productCategoryBar" className={"product_category_bar " + (fixedCategoryBar ? "stick" : "")}>
       {categoriesWithProduct.map(category =>
-        <a className={currentCategory_product_scroll === `${category.id}-${category.name.replace(/\s+/g, '-')}` ? 'selected' : ''}
+        <a id={`productCategoryBar_item_${category.id}-${category.name.replace(/\s+/g, '-')}`}
+          className={"productCategoryBar_item"} //+ currentCategory_product_scroll === `${category.id}-${category.name.replace(/\s+/g, '-')}` ? 'selected' : ''}
           key={category.id}
-          onClick={() => onProductCategoryBarclick(category)}>
+          onClick={(e) => onProductCategoryBarclick(e, category)}>
           {category.name}
         </a>)}
     </div>
